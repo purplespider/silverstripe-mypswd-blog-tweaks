@@ -30,7 +30,7 @@ This module contains a variety of tweaks to these modules that further perfect t
 * __Blog Post:__ Added a "Manage Posts" button to the top of the CMS EditForm, to allow the user an obvious way back to the posts Gridfield.
 * __Blog Post:__ Sets a custom upload location for Featured Image files.
 * __Blog Post:__ Hides to the Featured Image upload location.
-* __Blog Post:__ Sets the "PublishDate" to the current date/time whenever the page is published, if the PublishDate was set to a date/time in the past. This makes sure the reported "Published on XXX" is accurate.
+* __Blog Post:__ Sets the "PublishDate" to the current date/time when the page is published for the frst time, if the PublishDate was set to a date/time in the past. This makes sure the reported "Published on XXX" is accurate.
 * __Blog Post:__ Removed the Settings > Visibility section, as not normally applicable to blog posts.
 * __Blog Post:__ Adds an IsModified summary field to show in the posts Gridfield if a post has unpublished changes.
 * __Blog Post:__ Adds a "Created" summary field column.
