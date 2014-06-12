@@ -18,10 +18,10 @@ class BlogPostExtension extends DataExtension {
 	}
 
 	public function onBeforePublish() {
-			if ($this->owner->obj('PublishDate')->InPast()) {
-				$this->owner->setCastedField("PublishDate", time());
-				$this->owner->write();
-			}
+		if ($this->owner->obj('PublishDate')->InPast() && !$this->isPublished()) {
+			$this->owner->setCastedField("PublishDate", time());
+			$this->owner->write();
+		}
 	}
 
 	public function updateSettingsFields(FieldList $fields) {
