@@ -1,0 +1,72 @@
+#comments-holder p.info {
+	margin-bottom: 15px;
+}
+
+#comments-holder p.info .name {
+	font-weight: bold;
+}
+
+#comments-holder p.info .time {
+	font-size: 70%;
+	color: #8f8f8f;
+	padding-left: 5px;
+}
+
+#comments-holder ul {
+	list-style: none;
+}
+
+#comments-holder li.comment {
+	margin-left: 0;
+	background-image: none;
+	background-color: #f1f1f1;
+	list-style: none;
+	padding: 20px;
+	margin-bottom: 10px;
+	clear: both;
+	border-left: 3px solid #babbb7;
+}
+
+#comments-holder li.comment.unmoderated {
+	background-color: #ffefd5;
+	border-left: 3px solid #eeb966;
+}
+
+#comments-holder li.comment .comment p {
+	margin-bottom: 0;
+	font-size: 100%;
+}
+
+#comments-holder .message {
+	font-weight: bold;
+}
+
+#comments-holder .message.good {
+	color: green;
+}
+
+#comments-holder .message.warning {
+	color: orange;
+}
+
+#comments-holder .message.bad, #comments-holder .message.error {
+	color: red;
+}
+
+#comments-holder ul.action-links {
+	list-style: none;
+	margin-left: 0;
+	margin-bottom: 0;
+	margin-top: 10px;
+	float: right;
+	position: relative;
+	bottom: 15px;
+}
+
+#comments-holder ul.action-links li {
+	background-image: none;
+	display: inline;
+	margin-left: 0;
+	padding-left: 0;
+	font-size: 70%;
+}

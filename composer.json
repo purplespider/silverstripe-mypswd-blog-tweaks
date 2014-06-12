@@ -1,0 +1,18 @@
+{
+	"name": "purplespider/mypswd-blog-tweaks",
+	"description": "Tweaks to a range of modules to make a great SilverStripe blog solution",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "blog", "custom", "tweaks"],
+		"authors": [{
+			"name": "James Cocker",
+			"email": "ssmodules@pswd.biz"
+	}],
+	"require": {
+		"silverstripe/framework": "~3.1",
+		"silverstripe/cms": "~3.1",
+		"micmania1/silverstripe-blog": "*",
+		"silverstripe/comments": "*",
+		"tractorcow/silverstripe-comments-notifications": "*",
+		"silverstripe/mollom": "*"		
+	}
+}

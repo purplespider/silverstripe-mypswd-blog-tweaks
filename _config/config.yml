@@ -1,0 +1,29 @@
+---
+Name: mypswd-blog-tweaks
+After: 'framework/*','cms/*'
+---
+LeftAndMain:
+    extra_requirements_css:
+        - mypswd-blog-tweaks/css/cms.css
+BlogPost:
+    extensions:
+        - BlogPostExtension
+BlogPost_Controller:
+    extensions:
+        - BlogPostControllerExtension
+Blog:
+    extensions:
+        - BlogExtension
+Comment:
+    extensions:
+        - CommentExtension
+CommentAdmin:
+    extensions:
+        - CommentAdminExtension
+CommentingController:
+    extensions:
+        - CommentingControllerExtension
+CommentsNotifications:
+    recipient: 'SiteConfig'
+    email_template: 'CustomCommentNotificationsEmail'
+    email_subject: 'New Blog Comment'
