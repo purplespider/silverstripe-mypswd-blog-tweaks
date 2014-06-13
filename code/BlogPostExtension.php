@@ -17,13 +17,6 @@ class BlogPostExtension extends DataExtension {
 		$image->setCanPreviewFolder(false);
 	}
 
-	public function onBeforePublish() {
-		if ($this->owner->obj('PublishDate')->InPast() && !$this->isPublished()) {
-			$this->owner->setCastedField("PublishDate", time());
-			$this->owner->write();
-		}
-	}
-
 	public function updateSettingsFields(FieldList $fields) {
 		$fields->removeFieldFromTab("Root.Settings","Visibility");
 	}
