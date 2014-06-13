@@ -32,8 +32,6 @@ This module contains a variety of tweaks to these modules that further perfect t
 * __Blog Post:__ Hides to the Featured Image upload location.
 * __Blog Post:__ Sets the "PublishDate" to the current date/time when the page is published for the frst time, if the PublishDate was set to a date/time in the past. This makes sure the reported "Published on XXX" is accurate.
 * __Blog Post:__ Removed the Settings > Visibility section, as not normally applicable to blog posts.
-* __Blog Post:__ Adds an IsModified summary field to show in the posts Gridfield if a post has unpublished changes.
-* __Blog Post:__ Adds a "Created" summary field column.
 * __Blog Post:__ Added custom page icon.
  
 ### To [SilverStripe Comments](https://github.com/silverstripe/silverstripe-comments):

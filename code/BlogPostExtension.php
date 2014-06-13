@@ -28,13 +28,4 @@ class BlogPostExtension extends DataExtension {
 		$fields->removeFieldFromTab("Root.Settings","Visibility");
 	}
 
-	public function updateSummaryFields(&$fields) {
-		$fields['IsModified'] = '';
-		$fields['Created.Nice'] = 'Created';
-	}
-
-	public function IsModified() {
-		return $this->owner->IsModifiedOnStage ? "MODIFIED" : "";
-	}
-
 }
