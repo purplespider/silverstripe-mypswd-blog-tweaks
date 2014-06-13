@@ -31,7 +31,8 @@ This module contains a variety of tweaks to these modules that further perfect t
 * __Blog Post:__ Sets a custom upload location for Featured Image files.
 * __Blog Post:__ Hides to the Featured Image upload location.
 * __Blog Post:__ Removed the Settings > Visibility section, as not normally applicable to blog posts.
-* __Blog Post:__ Added custom page icon.
+* __Blog Post:__ Adds custom page icon.
+* __Blog Post:__ Adds a message below the categories and tags fields telling the user where to go to add them if none exist.
  
 ### To [SilverStripe Comments](https://github.com/silverstripe/silverstripe-comments):
 

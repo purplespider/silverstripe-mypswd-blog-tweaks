@@ -15,6 +15,15 @@ class BlogPostExtension extends DataExtension {
 		$image = $fields->dataFieldByName("FeaturedImage");
 		$image->setFolderName('Managed/BlogPosts/Featured');
 		$image->setCanPreviewFolder(false);
+
+		if(!$this->owner->Parent()->Categories()->count()) {
+			$cats = $fields->dataFieldByName("Categories");
+			$cats->setRightTitle("You must first add categories via the <strong>Blog Options</strong> tab on the <a href='admin/pages/edit/show/".$this->owner->Parent()->ID."'>main Blog page</a>.");
+		}
+		if(!$this->owner->Parent()->Tags()->count()) {
+			$cats = $fields->dataFieldByName("Tags");
+			$cats->setRightTitle("You must first add tags via the <strong>Blog Options</strong> tab on the <a href='admin/pages/edit/show/".$this->owner->Parent()->ID."'>main Blog page</a>.");
+		}
 	}
 
 	public function updateSettingsFields(FieldList $fields) {
