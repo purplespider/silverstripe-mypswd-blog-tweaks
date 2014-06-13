@@ -11,9 +11,6 @@ BlogPost:
 BlogPost_Controller:
     extensions:
         - BlogPostControllerExtension
-Blog:
-    extensions:
-        - BlogExtension
 Comment:
     extensions:
         - CommentExtension
@@ -27,3 +24,8 @@ CommentsNotifications:
     recipient: 'SiteConfig'
     email_template: 'CustomCommentNotificationsEmail'
     email_subject: 'New Blog Comment'
+Blog:
+    use_categories: true
+    use_tags: true
+    extensions:
+        - BlogExtension

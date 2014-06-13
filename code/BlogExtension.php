@@ -11,6 +11,16 @@ class BlogExtension extends DataExtension {
 
 	public function updateCMSFields(FieldList $fields) {
 		$fields->insertBefore(new Tab('Blog Posts'), 'Main');
+
+		// Get config options for using tags / categories
+		$use_categories = Config::inst()->get("Blog", 'use_categories');
+		$use_tags = Config::inst()->get("Blog", 'use_tags');
+
+		// Hide tags/categories fields if turned off in config
+		if(!$use_categories) $fields->removeFieldFromTab("Root.BlogOptions","Categories");
+		if(!$use_tags) $fields->removeFieldFromTab("Root.BlogOptions","Tags");
+
+		if(!$use_categories && !$use_tags) $fields->removeFieldFromTab("Root","BlogOptions");
    }
 
 }

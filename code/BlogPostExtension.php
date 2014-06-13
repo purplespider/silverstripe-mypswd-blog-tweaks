@@ -16,14 +16,24 @@ class BlogPostExtension extends DataExtension {
 		$image->setFolderName('Managed/BlogPosts/Featured');
 		$image->setCanPreviewFolder(false);
 
-		if(!$this->owner->Parent()->Categories()->count()) {
+		// Get config options for using tags / categories
+		$use_categories = Config::inst()->get("Blog", 'use_categories');
+		$use_tags = Config::inst()->get("Blog", 'use_tags');
+		
+		// Adds message below tags/categories fields if none exist telling user where to create them
+		if(!$this->owner->Parent()->Categories()->count() && $use_categories) {
 			$cats = $fields->dataFieldByName("Categories");
 			$cats->setRightTitle("You must first add categories via the <strong>Blog Options</strong> tab on the <a href='admin/pages/edit/show/".$this->owner->Parent()->ID."'>main Blog page</a>.");
 		}
-		if(!$this->owner->Parent()->Tags()->count()) {
+		if(!$this->owner->Parent()->Tags()->count() && $use_tags) {
 			$cats = $fields->dataFieldByName("Tags");
 			$cats->setRightTitle("You must first add tags via the <strong>Blog Options</strong> tab on the <a href='admin/pages/edit/show/".$this->owner->Parent()->ID."'>main Blog page</a>.");
 		}
+
+		// Hide tags/categories fields if turned off in config
+		if(!$use_categories) $fields->removeFieldFromTab("Root.Main","Categories");
+		if(!$use_tags) $fields->removeFieldFromTab("Root.Main","Tags");
+		
 	}
 
 	public function updateSettingsFields(FieldList $fields) {
