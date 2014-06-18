@@ -33,7 +33,7 @@ This module contains a variety of tweaks to these modules that further perfect t
 * __Blog Post:__ Removed the Settings > Visibility section, as not normally applicable to blog posts.
 * __Blog Post:__ Adds custom page icon.
 * __Blog Post:__ Adds a message below the categories and tags fields telling the user where to go to add them if none exist.
-* __Blog Post:__ Adds ability to enable/disable tags/categories in config.
+* __Blog Post:__ Adds ability to enable/disable tags/categories/featuredimage in config.
 * __Blog Post:__ Adds default frontend templates & CSS (which can be disabled in config).
  
 ### To [SilverStripe Comments](https://github.com/silverstripe/silverstripe-comments):

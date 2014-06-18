@@ -19,6 +19,7 @@ class BlogPostExtension extends DataExtension {
 		// Get config options for using tags / categories
 		$use_categories = Config::inst()->get("Blog", 'use_categories');
 		$use_tags = Config::inst()->get("Blog", 'use_tags');
+		$use_featured_image = Config::inst()->get("Blog", 'use_featured_image');
 
 		// Adds message below tags/categories fields if none exist telling user where to create them
 		if(!$this->owner->Parent()->Categories()->count() && $use_categories) {
@@ -33,6 +34,7 @@ class BlogPostExtension extends DataExtension {
 		// Hide tags/categories fields if turned off in config
 		if(!$use_categories) $fields->removeFieldFromTab("Root.Main","Categories");
 		if(!$use_tags) $fields->removeFieldFromTab("Root.Main","Tags");
+		if(!$use_featured_image && !$this->owner->FeaturedImage()->exists()) $fields->removeFieldFromTab("Root.Main","FeaturedImage");
 		
 	}
 

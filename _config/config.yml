@@ -5,6 +5,7 @@ After: 'framework/*','cms/*'
 Blog:
     use_categories: true
     use_tags: true
+    use_featured_image: true
     include_default_css: true
     extensions:
         - BlogExtension
