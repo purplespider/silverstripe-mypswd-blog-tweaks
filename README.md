@@ -24,7 +24,8 @@ This module contains a variety of tweaks to these modules that further perfect t
 * __Blog:__ Hides the redundant dropdown next to the "Add Blog Post" button (using CSS).
 * __Blog:__ Added $description static.
 * __Blog:__ Sets canCreate so only one blog can be created (keeps page type list tidy for non-admins)
-* __Blog:__ Added custom page icon.
+* __Blog:__ Adds custom page icon.
+* __Blog:__ Adds default frontend templates & CSS (which can be disabled in config).
 * __Blog Post:__ Removed the "MenuTitle" field, as not usually required for blog posts.
 * __Blog Post:__ Added a "Manage Posts" button to the top of the CMS EditForm, to allow the user an obvious way back to the posts Gridfield.
 * __Blog Post:__ Sets a custom upload location for Featured Image files.
@@ -32,7 +33,8 @@ This module contains a variety of tweaks to these modules that further perfect t
 * __Blog Post:__ Removed the Settings > Visibility section, as not normally applicable to blog posts.
 * __Blog Post:__ Adds custom page icon.
 * __Blog Post:__ Adds a message below the categories and tags fields telling the user where to go to add them if none exist.
-* __Blog Post:__ Adds ability to enable/disable tags/categories in config 
+* __Blog Post:__ Adds ability to enable/disable tags/categories in config.
+* __Blog Post:__ Adds default frontend templates & CSS (which can be disabled in config).
  
 ### To [SilverStripe Comments](https://github.com/silverstripe/silverstripe-comments):
 
