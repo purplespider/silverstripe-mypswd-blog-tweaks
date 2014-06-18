@@ -2,6 +2,10 @@
 
 class BlogExtension extends DataExtension {
 
+	private static $db = array(
+		"DisplayFullPosts" => "Boolean"
+	);
+
 	private static $description = "Displays listings of blog entries";
 	private static $icon = "mypswd-blog-tweaks/images/blogholder-file.png";
 
@@ -21,5 +25,10 @@ class BlogExtension extends DataExtension {
 
 		if(!$use_categories && !$use_tags) $fields->removeFieldFromTab("Root","BlogOptions");
    }
+
+	public function updateSettingsFields(FieldList $fields) {
+		$fields->addFieldToTab("Root.Settings", new Checkboxfield('DisplayFullPosts','Display full posts on Blog page?'));
+		return $fields;
+	}
 
 }
