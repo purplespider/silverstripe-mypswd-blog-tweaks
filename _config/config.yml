@@ -2,9 +2,15 @@
 Name: mypswd-blog-tweaks
 After: 'framework/*','cms/*'
 ---
-LeftAndMain:
-    extra_requirements_css:
-        - mypswd-blog-tweaks/css/cms.css
+Blog:
+    use_categories: true
+    use_tags: true
+    include_default_css: true
+    extensions:
+        - BlogExtension
+Blog_Controller:
+    extensions:
+        - BlogControllerExtension
 BlogPost:
     extensions:
         - BlogPostExtension
@@ -24,8 +30,6 @@ CommentsNotifications:
     recipient: 'SiteConfig'
     email_template: 'CustomCommentNotificationsEmail'
     email_subject: 'New Blog Comment'
-Blog:
-    use_categories: true
-    use_tags: true
-    extensions:
-        - BlogExtension
+LeftAndMain:
+    extra_requirements_css:
+        - mypswd-blog-tweaks/css/cms.css

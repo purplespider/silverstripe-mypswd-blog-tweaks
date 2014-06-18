@@ -19,7 +19,7 @@ class BlogPostExtension extends DataExtension {
 		// Get config options for using tags / categories
 		$use_categories = Config::inst()->get("Blog", 'use_categories');
 		$use_tags = Config::inst()->get("Blog", 'use_tags');
-		
+
 		// Adds message below tags/categories fields if none exist telling user where to create them
 		if(!$this->owner->Parent()->Categories()->count() && $use_categories) {
 			$cats = $fields->dataFieldByName("Categories");
@@ -39,5 +39,24 @@ class BlogPostExtension extends DataExtension {
 	public function updateSettingsFields(FieldList $fields) {
 		$fields->removeFieldFromTab("Root.Settings","Visibility");
 	}
+
+	public function wordCount() {
+		$content = trim(Convert::xml2raw($this->owner->Content));
+		$noWords = count(explode(' ', $content));
+		return $noWords;
+	}
+
+	public function isLong() {
+		return ($this->owner->wordCount() > 150) ? true : false;
+	}
+
+	public function summary() {
+		if ($this->owner->isLong()) {
+			return $this->owner->obj('Content')->FirstParagraph('html');
+		} else {
+			return $this->owner->Content;
+		}
+	}
+
 
 }
