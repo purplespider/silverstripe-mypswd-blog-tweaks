@@ -21,7 +21,6 @@ This module contains a variety of tweaks to these modules that further perfect t
 
 ### To [SilverStripe Blogger](https://github.com/micmania1/silverstripe-blogger):
 
-* __Blog:__ Sets the "Blog Posts" CMS tab to the first tab for faster and more obvious access to posts.
 * __Blog:__ Hides the redundant dropdown next to the "Add Blog Post" button (using CSS).
 * __Blog:__ Added $description static.
 * __Blog:__ Sets canCreate so only one blog can be created (keeps page type list tidy for non-admins)
