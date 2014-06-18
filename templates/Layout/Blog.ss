@@ -2,7 +2,7 @@
 
 $Content
 
-<% loop getBlogPosts %>
+<% loop PaginatedList %>
 
 	<div class="blogshort">
 
