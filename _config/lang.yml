@@ -1,0 +1,9 @@
+---
+Name: customi18n
+Before: 'defaulti18n'
+---
+i18n:
+  module_priority:
+    - mypswd-blog-tweaks
+    - comments
+    - other_modules
