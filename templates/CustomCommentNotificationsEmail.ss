@@ -24,9 +24,16 @@
 				<dd>$Comment.XML</dd>
 			<% end_if %>
 		</dl>
+		
+			<p><br />
+			
+			<% if Moderated %><% else %>
+			    <a href="{$BaseHref}/CommentApproval/processComment/{$ID}?token={$LinkToken}"><strong>APPROVE COMMENT</strong></a> | 
+			<% end_if %>
+		
+				<a href="{$BaseHref}/CommentApproval/processComment/{$ID}?token={$LinkToken}&delete">DELETE COMMENT</a>
 
-		<% if Moderated %><% else %>
-		    <p><br /><a href="{$BaseHref}/CommentApproval/processComment/{$ID}?token={$LinkToken}"><strong>APPROVE COMMENT</strong></a> | <a href="{$BaseHref}/CommentApproval/processComment/{$ID}?token={$LinkToken}&delete">DELETE COMMENT</a></p>
-		<% end_if %>
+			</p>		
+
 	</body>
 </html>
