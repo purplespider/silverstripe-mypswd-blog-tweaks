@@ -1,6 +1,12 @@
 <h1>$Title</h1>
 
-$Content
+<% if CurrentCategory %>
+    <p>Showings posts in the <strong>$CurrentCategory.Title</strong> category. - <a href="$Top.Link">View All Posts</a></p>
+<% else_if CurrentTag %>
+    <p>Showings posts tagged <strong>$CurrentTag.Title</strong>. - <a href="$Top.Link">View All Posts</a></p>
+<% else %>
+	$Content
+<% end_if %>
 
 <% loop PaginatedList %>
 
