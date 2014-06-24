@@ -13,8 +13,10 @@ class BlogPostExtension extends DataExtension {
 		</span></a>"),'Title');
 
 		$image = $fields->dataFieldByName("FeaturedImage");
-		$image->setFolderName('Managed/BlogPosts/Featured');
-		$image->setCanPreviewFolder(false);
+		if($image) {
+			$image->setFolderName('Managed/BlogPosts/Featured');
+			$image->setCanPreviewFolder(false);
+		}
 
 		// Get config options for using tags / categories
 		$use_categories = Config::inst()->get("Blog", 'use_categories');
