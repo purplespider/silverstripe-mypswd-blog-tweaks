@@ -30,7 +30,7 @@ en:
   CommentingController:
     COMMENTS: Comments
     EMAILADDRESS: 'E-mail'
-    PERMISSIONFAILURE: 'You''re not able to post comments to this page. Please ensure you are logged in and have an appropriate permission level.'
+    PERMISSIONFAILURE: 'You''re not able to post comments to this post. Please ensure you are logged in and have an appropriate permission level.'
     RSSTITLE: 'Comments RSS Feed'
     WEBSITEURL: 'Your website URL'
   CommentsAdmin:
@@ -43,14 +43,14 @@ en:
     COMMENTSDISABLED: 'Posting comments has been disabled'
     LOGINTOPOSTCOMMENT: 'Login to post a comment'
     NEXT: next
-    NOCOMMENTSYET: 'No one has commented on this page yet.'
+    NOCOMMENTSYET: 'No one has commented on this post yet.'
     POSTCOM: 'Post your comment'
     PREV: previous
     RSSFEEDALLCOMMENTS: 'RSS feed for all comments'
-    RSSFEEDCOMMENTS: 'RSS feed for comments on this page'
+    RSSFEEDCOMMENTS: 'RSS feed for comments on this post'
     AWAITINGMODERATION: 'Your comment has been submitted and is now awaiting moderation.'
     PageCommentInterface:
-      DELETEALLCOMMENTS: 'Delete all comments on this page'
+      DELETEALLCOMMENTS: 'Delete all comments on this post'
   CommentsInterface_pendingcomment_ss:
     AWAITINGMODERATION: 'Your comment has been submitted and is now awaiting moderation.'
   CommentsInterface_singlecomment_ss:
@@ -60,4 +60,4 @@ en:
     PBY: 'Posted by'
     REMCOM: 'remove this comment'
   PageCommentInterface:
-    DELETEALLCOMMENTS: 'Delete all comments on this page'
+    DELETEALLCOMMENTS: 'Delete all comments on this post'
