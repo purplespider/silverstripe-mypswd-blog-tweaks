@@ -28,6 +28,9 @@ class BlogExtension extends DataExtension {
 
 	public function updateSettingsFields(FieldList $fields) {
 		$fields->addFieldToTab("Root.Settings", new Checkboxfield('DisplayFullPosts','Display full posts on Blog page?'));
+
+		$fields->removeFieldFromTab("Root.Settings","ProvideComments");
+		
 		return $fields;
 	}
 
