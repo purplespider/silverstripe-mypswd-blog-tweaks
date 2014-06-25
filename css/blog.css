@@ -3,3 +3,10 @@
 	padding: 20px;
 	padding-top: 0;
 }
+
+.blogpagination {
+	font-size: 160%;
+	a.prev {
+		float: right;
+	}
+}

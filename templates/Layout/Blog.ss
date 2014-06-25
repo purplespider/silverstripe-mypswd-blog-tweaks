@@ -31,3 +31,14 @@
 	</div>
 
 <% end_loop %>
+
+<% if $PaginatedList.MoreThanOnePage %>
+	<p class="blogpagination">
+		<% if $PaginatedList.NotLastPage %>
+		    <a class="next" href="$PaginatedList.NextLink">&laquo; Older Posts</a>
+		<% end_if %>
+	    <% if $PaginatedList.NotFirstPage %>
+	        <a class="prev" href="$PaginatedList.PrevLink">Newer Posts &raquo; </a>
+	    <% end_if %>
+    </p>
+<% end_if %>
