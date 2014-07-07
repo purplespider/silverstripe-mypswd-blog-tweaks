@@ -18,6 +18,9 @@ BlogPost:
 BlogPost_Controller:
     extensions:
         - BlogPostControllerExtension
+BlogCategory:
+    extensions:
+        - BlogCategoryExtension
 Comment:
     extensions:
         - CommentExtension
