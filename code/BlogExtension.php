@@ -20,10 +20,10 @@ class BlogExtension extends DataExtension {
 		$use_tags = Config::inst()->get("Blog", 'use_tags');
 
 		// Hide tags/categories fields if turned off in config
-		if(!$use_categories) $fields->removeFieldFromTab("Root.BlogOptions","Categories");
-		if(!$use_tags) $fields->removeFieldFromTab("Root.BlogOptions","Tags");
+		if(!$use_categories) $fields->removeFieldFromTab("Root.Categorisation","Categories");
+		if(!$use_tags) $fields->removeFieldFromTab("Root.Categorisation","Tags");
 
-		if(!$use_categories && !$use_tags) $fields->removeFieldFromTab("Root","BlogOptions");
+		if(!$use_categories && !$use_tags) $fields->removeFieldFromTab("Root","Categorisation");
    }
 
 	public function updateSettingsFields(FieldList $fields) {

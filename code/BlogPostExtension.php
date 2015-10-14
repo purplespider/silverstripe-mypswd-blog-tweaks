@@ -34,9 +34,12 @@ class BlogPostExtension extends DataExtension {
 		}
 
 		// Hide tags/categories fields if turned off in config
-		if(!$use_categories) $fields->removeFieldFromTab("Root.Main","Categories");
-		if(!$use_tags) $fields->removeFieldFromTab("Root.Main","Tags");
+		if(!$use_categories) $fields->removeByName("Categories");
+		if(!$use_tags) $fields->removeByName("Tags");
 		if(!$use_featured_image && !$this->owner->FeaturedImage()->exists()) $fields->removeFieldFromTab("Root.Main","FeaturedImage");
+		
+		// Need to add proper support for this, removing for now, needs to play nicely with my "Disply Full Posts" option:
+		$fields->removeFieldFromTab("Root.Main","CustomSummary");
 		
 	}
 
