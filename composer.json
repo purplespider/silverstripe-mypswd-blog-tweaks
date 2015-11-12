@@ -2,7 +2,7 @@
 	"name": "purplespider/mypswd-blog-tweaks",
 	"description": "Tweaks to a range of modules to make a great SilverStripe blog solution",
 	"type": "silverstripe-module",
-	"homepage": "https://github.com/purplespider/silverstripe-mypswd-tweaks",
+	"homepage": "https://github.com/purplespider/silverstripe-mypswd-blog-tweaks",
 	"keywords": ["silverstripe", "blog", "custom", "tweaks"],
 	"license": "BSD-3-Clause",
 	"authors": [{
@@ -10,7 +10,7 @@
 		"email": "ssmodules@pswd.biz"
 	}],
 	"support": {
-		"issues": "https://github.com/purplespider/silverstripe-mypswd-tweaks/issues"
+		"issues": "https://github.com/purplespider/silverstripe-mypswd-blog-tweaks/issues"
 	},
 	"require": {
 		"silverstripe/framework": "~3.1",
