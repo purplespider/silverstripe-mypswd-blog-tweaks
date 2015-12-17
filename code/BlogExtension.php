@@ -1,37 +1,46 @@
 <?php
 
-class BlogExtension extends DataExtension {
+class BlogExtension extends DataExtension
+{
 
-	private static $db = array(
-		"DisplayFullPosts" => "Boolean"
-	);
+    private static $db = array(
+        "DisplayFullPosts" => "Boolean"
+    );
 
-	private static $description = "Displays listings of blog entries";
-	private static $icon = "mypswd-blog-tweaks/images/blogholder-file.png";
+    private static $description = "Displays listings of blog entries";
+    private static $icon = "mypswd-blog-tweaks/images/blogholder-file.png";
 
-	public function canCreate($members = null) {
-		return !DataObject::get_one($this->owner->ClassName);
-	}
+    public function canCreate($members = null)
+    {
+        return !DataObject::get_one($this->owner->ClassName);
+    }
 
-	public function updateCMSFields(FieldList $fields) {
+    public function updateCMSFields(FieldList $fields)
+    {
 
-		// Get config options for using tags / categories
-		$use_categories = Config::inst()->get("Blog", 'use_categories');
-		$use_tags = Config::inst()->get("Blog", 'use_tags');
+        // Get config options for using tags / categories
+        $use_categories = Config::inst()->get("Blog", 'use_categories');
+        $use_tags = Config::inst()->get("Blog", 'use_tags');
 
-		// Hide tags/categories fields if turned off in config
-		if(!$use_categories) $fields->removeFieldFromTab("Root.Categorisation","Categories");
-		if(!$use_tags) $fields->removeFieldFromTab("Root.Categorisation","Tags");
+        // Hide tags/categories fields if turned off in config
+        if (!$use_categories) {
+            $fields->removeFieldFromTab("Root.Categorisation", "Categories");
+        }
+        if (!$use_tags) {
+            $fields->removeFieldFromTab("Root.Categorisation", "Tags");
+        }
 
-		if(!$use_categories && !$use_tags) $fields->removeFieldFromTab("Root","Categorisation");
-   }
+        if (!$use_categories && !$use_tags) {
+            $fields->removeFieldFromTab("Root", "Categorisation");
+        }
+    }
 
-	public function updateSettingsFields(FieldList $fields) {
-		$fields->addFieldToTab("Root.Settings", new Checkboxfield('DisplayFullPosts','Display full posts on Blog page?'));
+    public function updateSettingsFields(FieldList $fields)
+    {
+        $fields->addFieldToTab("Root.Settings", new Checkboxfield('DisplayFullPosts', 'Display full posts on Blog page?'));
 
-		$fields->removeFieldFromTab("Root.Settings","ProvideComments");
-		
-		return $fields;
-	}
-
+        $fields->removeFieldFromTab("Root.Settings", "ProvideComments");
+        
+        return $fields;
+    }
 }

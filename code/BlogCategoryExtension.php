@@ -1,21 +1,25 @@
 <?php
 
-class BlogCategoryExtension extends DataExtension {
+class BlogCategoryExtension extends DataExtension
+{
 
-	function canCreate($members = null) {
-		return true;
-	}
-	
-	function canEdit($members = null) {
-		return true;
-	}
-	
-	function canDelete($members = null) {
-		return true;
-	}
-	
-	function canView($members = null) {
-		return true;
-	}
-
+    public function canCreate($members = null)
+    {
+        return true;
+    }
+    
+    public function canEdit($members = null)
+    {
+        return true;
+    }
+    
+    public function canDelete($members = null)
+    {
+        return true;
+    }
+    
+    public function canView($members = null)
+    {
+        return true;
+    }
 }
