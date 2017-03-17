@@ -72,7 +72,7 @@ class BlogPostExtension extends DataExtension
         if ($this->owner->isLong()) {
             return $this->owner->obj('Content')->FirstParagraph('html');
         } else {
-            return $this->owner->Content;
+            return $this->owner->obj('Content');
         }
     }
 }
